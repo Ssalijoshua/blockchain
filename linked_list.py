@@ -4,8 +4,9 @@ So here I am just going to implement the linked list and then I will create a se
 """
 
 class Block:
-    next_block = None
-    data = None
+    def __init__(self):
+        self.next_block = None
+        self.data = None
 
 block_A = Block()
 block_B = Block()
@@ -20,11 +21,11 @@ block_A.data = 56
 block_B.next_block = block_C
 block_B.data = "Cookies"
 
-block_C.next_block = "<end>"
-block_B.data = 897756
+block_C.next_block = None
+block_C.data = 897756
 
 current_block = block_A
-while current_block.next_block != None:
-    print(current_block,end = '')
+while current_block != None:
+    print("Data: ",end = '')
     print(current_block.data)
     current_block = current_block.next_block

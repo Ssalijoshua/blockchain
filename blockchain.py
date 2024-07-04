@@ -26,3 +26,5 @@ current_block = block_A
 while current_block is not None:
     print("Hash:", current_block.parent_hash)
     current_block = current_block.next_block
+
+# print(hashlib.sha384(json.dumps({k: v for k, v in block_B.__dict__.items() if k != "next_block"}).encode('utf-8')).hexdigest())
